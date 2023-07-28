@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Variables */
+
+:root{
+    --main-color:#10CAB7;
+}
+
+/* End Variables */
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 60px;
+}
+
+.links{
+    position: relative;
+}
+
+.icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.icon span{
+    background-color: #333;
+    height: 2px;
+    margin-top: 5px;
+}
+
+.links:hover .icon span:nth-child(2){
+    width: 100%;
+}
+
+.links:hover  ul{
+    display: block;
+}
+
+.icon span:first-child , .icon span:last-child{
+    width: 100%;
+}
+
+.links ul{
+    list-style: none;
+    background-color: #F6F6F6;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 20px);
+    display: none;
+    z-index: 1;
+}
+
+
+.links ul li a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.3s ease-in;
+}
+
+.links ul li a:hover{
+    padding-left: 30px;
+}
+
+.links ul li:not(:last-child) a{
+    border-bottom: 2px solid #DDD;
+}
+
+.links ul::before{
+    content: '';
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #F6F6F6 transparent;
+    right: 5px;
+    top: -19px;
+}
+
+.landing{
+    background-image: url(../assets/cover-photo1.jpg);
+    background-size: cover;
+    height: calc(100vh - 44px);
+    position: relative;
+}
+
+.landing h1{
+    margin: 0;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.landing p {
+    line-height: 1.8;
+    font-size: 19px;
+    max-width: 320px;
+}
+
+.intro-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.icon span:nth-child(2){
+    width: 60%;
+    transition: 0.3s ease-in;
+}
+
+@media (min-width: 768px) {
+    .container{
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
